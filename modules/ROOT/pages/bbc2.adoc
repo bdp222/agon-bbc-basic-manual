@@ -132,16 +132,15 @@ You can overcome the problem of 'garbage' by reserving enough memory for the lon
 
 [source,console]
 ----
-10 DIM names$(10)
+10 DIM name$(10)
 20 FOR i=0 TO 10
 30   name$(i)=STRING$(20," ")
 40 NEXT
-50 stop$="";
+50 stop$=""
 60 FOR i=0 TO 10
 70   name$(i)="";
 80 NEXT
 ----
-
 
 Assigning a null string to `stop$` prevents the space for the last entry in the array being recovered when it is emptied.
 
